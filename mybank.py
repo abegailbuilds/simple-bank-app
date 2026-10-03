@@ -4,8 +4,9 @@ withdrawalAmount=0
 choices=0
 balance=0
 
-while choices<=4:
-    account_no=int(input("Enter your account number: "))
+account_no = int(input("Enter your account number: "))
+
+while choices !=4:
     print("1. Deposit")
     print("2. Withdraw")
     print("3. Check balance")
@@ -17,7 +18,7 @@ while choices<=4:
 
         case 1:
             depositAmount=int(input("Enter amount to Deposit : "))
-            if depositAmount<0:
+            if depositAmount<=0:
                 print("Amount should be greater than 0")
 
             else:
@@ -31,6 +32,7 @@ while choices<=4:
 
             else:
                 balance=balance-withdrawalAmount
+
 
 
         case 3:
